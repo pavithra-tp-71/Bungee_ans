@@ -1,0 +1,9 @@
+from google.colab import drive
+drive.mount('/content/drive')
+import pandas as pd
+import numpy as np
+import seaborn as ans
+df=pd.read_csv('/content/drive/MyDrive/main3.csv')
+df
+result=df[['Team','Yellow Cards','Red Cards']]
+result.sort_values(by=['Red Cards','Yellow Cards'],ascending=False)
